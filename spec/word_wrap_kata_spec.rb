@@ -36,4 +36,22 @@ describe WordWrapKata do
     expect(@word_wrap_kata.wrap(string, max_length)).to eq "hello, I \nam Sarah"
   end
 
+  it "breaks a string into 2 parts" do
+    max_length = 2
+    string = "mary"
+    expect(@word_wrap_kata.wrap(string, max_length)).to eq "ma\nry"
+  end
+
+  it "breaks a string into 3 parts" do
+    max_length = 1
+    string = "dog"
+    expect(@word_wrap_kata.wrap(string, max_length)).to eq "d\no\ng"
+  end
+
+  it "breaks a string into 3 parts" do
+    max_length = 2
+    string = "it is"
+    expect(@word_wrap_kata.wrap(string, max_length)).to eq "it\n i\ns"
+  end
+
 end
